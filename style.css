@@ -538,7 +538,7 @@ header {
 
   .right {
     margin: 0;
-    padding: 10px;
+    padding-left: 10px;
     height: auto;
   }
 
@@ -556,10 +556,10 @@ header {
   /* video page layout stacks */
   .left1,
   .right1 {
-    width: 100%;
+    width: 95%;
     height: auto;
     margin: 0;
-    padding: 0;
+    padding-left: 15px;
   }
 
   .right1 {
@@ -568,7 +568,7 @@ header {
 
   #myvideoplayer {
     max-width: 100%;
-    width: 100%;
+    width: 95%;
     margin: 10px 0 0 0;
   }
 
@@ -602,8 +602,8 @@ header {
   }
 
   .seekbar {
-    width: 100%;
-    margin-left: 0;
+    width: 95%;
+    margin-left: 10px;
   }
 
   .songinfo {
@@ -631,6 +631,7 @@ header {
   .videocont {
     width: 100%;
     height: auto;
+    padding-left: 8px;
     aspect-ratio: 16 / 9;
   }
 
