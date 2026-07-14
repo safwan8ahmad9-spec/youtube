@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="threeline">
+       <img src="img/threeline.svg" alt="">
+       </div>
+        <div class="logo"><a href="index.html">
+            <img src="img/logo.svg" alt="">
+        </a></div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <div class="search1">
+            <img src="img/search.svg" alt=""></div>
+        </div>
+        <div class="voice">
+            <img src="img/voice.svg" alt="">
+        </div>
+        <div class="threedot">
+            <img src="img/threedot.svg" alt="">
+        </div>
+        <div class="signup">
+            <img src="img/you.svg" alt="">
+            <p> Sign In</p>
+        </div>
+       </header>
+       <div class="container">
+        <div class="left1">   
+         <div class="videocontainer">
+        <video id="myvideoplayer" controls autoplay></video>
+        <div class="videodetail">
+        <p class="video-title" id="vidTitle">Loading...</p>
+        <p class="video-channel" id="ideo-channel"></p>
+    </div>
+    </div>
+   <div class="playbar">
+    <div class="seekbar">
+        <div class="circle"></div>
+    </div>
+    <div class="above">
+    <div class="songinfo"><p></p></div>
+    <div class="songbutton">
+        <img src="img/prevsong.svg" id="prev" alt="">
+        <img src="img/play.svg" id="play" alt="">
+        <img src="img/nextsong.svg" id="next" class="invert" alt="">
+    </div>
+    <div class="songtime">
+        <p></p>        
+        <p> /  </p>
+        <p></p>
+       </div>
+       <div class="volume">
+        <img src="img/volume.svg" alt="">
+        <div class="range">
+            <input type="range" min="0" max="100" value="50">
+        </div>
+       </div>
+   </div>  
+    </div>
+       </div>
+        <div class="right1">
+            <p>More Videos</p>
+            <div class="videocont">
+                
+
+             
+            </div>
+        </div>
+    </div>
+    
+    <script src="play.js"></script>
+</body>
+</html>
