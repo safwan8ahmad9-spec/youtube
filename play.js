@@ -34,7 +34,7 @@ videodata.forEach(function(video){
                     <div class="carddetail">
                         <div class="d1">
                         <h3 class="cardtitle">${video.title}</h3>
-                        <img src="img/threedot.svg" alt="">
+                        <img src="img/threedot.svg" alt="" class="threedot">
                         </div>
                         <p class="cardchannel">${video.channelName}</p>
                         <div class="title1">
@@ -117,7 +117,33 @@ console.log(selectedVideo.title);
         document.querySelector(".circle").style.left = percent + "%";
         videoPlayer.currentTime = (videoPlayer.duration * percent) / 100;
     });
-
+let searchInput = document.getElementById("search-input");
+if (searchInput !== null) {
+  searchInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      let searchQuery = searchInput.value.toLowerCase().trim();
+      if(searchQuery==="") return;
+      let allCards=document.querySelectorAll(".card1 ");      
+      let isfound=false;
+      for(let i=0;i<allCards.length;i++){
+        let cardTitle=allCards[i].innerText.toLowerCase();
+        if(cardTitle.includes(searchQuery)){         
+          allCards[i].scrollIntoView({behavior:"smooth",block:"center"});
+          let originalbg=allCards[i].style.backgroundColor;
+          allCards[i].style.backgroundColor="#cddef3d2";
+          setTimeout(()=>{
+            allCards[i].style.backgroundColor=originalbg;
+          },3000);
+           isfound=true;
+           break;
+        }
+      }
+      if(!isfound){
+        alert("No matching product found.");
+      }
+    }
+  });
+}
 
 
 
